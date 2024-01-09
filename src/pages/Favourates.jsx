@@ -48,7 +48,7 @@ function Favourates() {
               <td>{index+1}</td>
               <td>{item?.title}</td>
               <td>{item?.author}</td>
-              <td>{item?.url}</td>
+              <td><img style={{width:'50px'}} src={item?.url} alt="" /></td>
               <td><button onClick={()=>removeFavItem(item?.id)} className='btn'><i class="fa-solid fa-trash text-danger" ></i></button></td>
             </tr>
            )) :<p className='fw-bold text-warning fs-4'>Favourites is Empty</p>
