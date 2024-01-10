@@ -8,10 +8,13 @@ import {Link} from 'react-router-dom'
 function View({uploadBookRes}) {
 
   const [allBooks,setAllBooks] = useState([])
+  const [deleteResponse,setDeleteResponse]=useState(false) 
+
 
   useEffect(()=>{
     getAllUploadedBooks()
-  },[uploadBookRes])
+    setDeleteResponse(false)
+  },[uploadBookRes,deleteResponse])
 
   const getAllUploadedBooks=async ()=>{
     const result = await getAllBooksAPI()
@@ -25,6 +28,7 @@ function View({uploadBookRes}) {
 
   const removeBook=async (id)=>{
     await removeABookAPI(id)
+    setDeleteResponse(true)
   }
 
   return (

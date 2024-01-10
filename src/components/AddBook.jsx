@@ -28,7 +28,6 @@ function AddBook({setUploadRes}) {
       if(result.status>=200 && result.status<300){
         //sucess
         handleClose() //to close the modal
-
         //reset uploadbook state
         setUploadBook({
           title:"",author:"",url:"",description:"",price:""
@@ -40,6 +39,8 @@ function AddBook({setUploadRes}) {
       }
     }
   }
+
+  
 
   return (
     <div>

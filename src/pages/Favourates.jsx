@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import Header from '../components/Header'
 import { Table } from 'react-bootstrap'
 import { getBookFromFavouriteAPI ,removeFavouriteAPI} from '../backend/allAPI'
+import { Link } from 'react-router-dom'
 
 
 function Favourates() {
@@ -55,6 +56,9 @@ function Favourates() {
            }
          </tbody>
       </Table>
+      <div className="d-flex justify-content-center align-items-center mt-5">
+        <Link to={'/home'}><button className='btn btn-warning fs-5'><i className='fa-solid fa-arrow-left fw-bold me-3 fs-5'></i>Back To Home</button></Link>
+      </div>
      </div>
     </>
   )

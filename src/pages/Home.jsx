@@ -12,7 +12,7 @@ function Home() {
     <div>
       <Header insideHome/>
        <AddBook setUploadRes={setUploadRes}/>
-       <View uploadBookRes={uploadBookRes}/>
+       <View  uploadBookRes={uploadBookRes}/>
     </div>
   )
 }
